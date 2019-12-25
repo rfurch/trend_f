@@ -513,6 +513,33 @@ if ( ((t->f)=fopen(fullpathname, "r")) != NULL )
             printData(t);
 
 	} // pf1 and pf2 found
+
+
+	// free all stuff
+	if ( t->orig_time )
+		free(t->orig_time);
+		
+  	if (t->raw_data_str)
+	  	free(t->raw_data_str);
+
+	for (n=0 ; n < t->nfields ; n++)
+		if ( t->orig_data[n] )
+			free(t->orig_data[n]);
+
+	if ( t->orig_data )
+		free(t->orig_data);
+
+	if ( t->final_time )
+		free( t->final_time );
+
+	for (n=0 ; n < t->nfields ; n++)
+	  if ( t->final_data[n] )
+		free( t->final_data[n] );
+	  
+	if ( t->final_data )
+		free( t->final_data );
+		
+
   fclose(t->f);
   }  // fopen
   
