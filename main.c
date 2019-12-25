@@ -381,7 +381,7 @@ long int		toread=0, nread=0, totalread=0;
 int 			n=0;  
 
 // make complete path
-composeFname(fullpathname, t->fpath, t->fname);
+composeFname(fullpathname, t->fpath, t->fname); 
 
 getFileSize(fullpathname, &(t->fsize));
 if (_verbose > 2)
