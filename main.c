@@ -378,7 +378,7 @@ int getBWDataFromFile(trenddata *t)
 char 			fullpathname[500];
 int 			p1f=0, p2f=0;
 long int		toread=0, nread=0, totalread=0;
-int 			n=0;
+int 			n=0;  
 
 // make complete path
 composeFname(fullpathname, t->fpath, t->fname);
